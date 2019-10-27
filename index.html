@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <h1>Ծրագրավորում III Ստեփանակերտ</h1>
+            </tr>
+            <tr>
+                <h1>Թաթուլ Դանիելյան</h1>
+            </tr>
+            <tr>
+                <td>Եղանակ</td>
+                <td id="weather"></td>
+            </tr>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Գույն</th>
+                <th scope="col">Նկարագրություն</th>
+                <th scope="col">Ծնվել է</th>
+                <th scope="col">Այս պահին կա</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td scope="row" style="background-color:green;"></td>
+                <td>Խոտ, բազմանում են մոտակա 8 վանդակներում:</td>
+                <td id="grassCount"></td>
+                <td id="grassLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td>Խոտակեր, ապրում են խոտեր ուտելով, բազմանում 5 անգամ անընդմեջ խոտ ուտելով և մեռնում 25 անգամ անընդմեջ
+                    չուտելուց:</td>
+                <td id="grassEaterCount"></td>
+                <td id="grassEaterLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td>Սա գիշատիչն է, որը ուտում է խոտակերին: Բազմանում 3 անգամ անընդմեջ Խոտակեր ուտելով և մեռնում 90 անգամ
+                    անընդմեջ
+                    չուտելուց:</td>
+                <td id="predatorCount"></td>
+                <td id="predatorLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:blue;"></td>
+                <td>Սա մարդն է, որը ուտում է գիշատիչին: Բազմանում 3 անգամ անընդմեջ Գիշատիչ ուտելով և մեռնում 100 անգամ
+                    անընդմեջ
+                    չուտելուց:</td>
+                <td id="manCount"></td>
+                <td id="manLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td>Սա մարդասպանն է, որը ուտում է մարդուն:Այն շարժվում է անկյունագծերով : Բազմանում է 3 անգամ անընդմեջ
+                    Մարդ ուտելով և մեռնում 120 անգամ անընդմեջ
+                    չուտելուց:
+                </td>
+                <td id="killerCount"></td>
+                <td id="killerLiveCount"></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td scope="row" style="background-color:#ff00ff;"></td>
+                <td>Սա  Տիտանն է, որը ուտում է մարդասպանին:Այն շարժվում է անկյունագծերով:Բազմանում է 3 անգամ անընդմեջ
+                    մարդասպան ուտելով և մեռնում 130 անգամ անընդմեջ
+                    չուտելուց:
+                </td>
+                <td id="titanCount"></td>
+                <td id="titanLiveCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
